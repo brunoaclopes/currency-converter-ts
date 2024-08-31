@@ -1,0 +1,32 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  ci:
+    name: Publish Dev
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+
+      - name: Setup node env
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20.x"
+          always-auth: true
+
+      - name: Set test env
+        run: cat .env.local.example > .env
+
+      - name: Build Project
+        run: yarn build
+
+      - name: Publish
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          yarn deploy -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
