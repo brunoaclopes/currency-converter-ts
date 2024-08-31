@@ -1,12 +1,14 @@
 .footer {
-    padding: 0 10% 40px 10%;
+    padding: 0 10% 20px 10%;
     font-family: Roboto, sans-serif;
+    box-shadow: 0 -40px 80px #fffd;
+    z-index: 1;
 
     .topSection {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 40px 0 14px 0;
+        padding-top: 30px;
         border-top: 1px solid #e4eaf2;
 
         .logo {
