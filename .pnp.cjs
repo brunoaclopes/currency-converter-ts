@@ -63,6 +63,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:b0a4c16922af7feb44791245ecd11f1b2cbd2c7a9d6b890b3a77018748e5f06e6a300aae20fe33d0c07993bf0ebab5044b1d86c00b5ea8d4b44287da003232bb#npm:18.3.1"],\
           ["react-scripts", "virtual:b0a4c16922af7feb44791245ecd11f1b2cbd2c7a9d6b890b3a77018748e5f06e6a300aae20fe33d0c07993bf0ebab5044b1d86c00b5ea8d4b44287da003232bb#npm:5.0.1"],\
+          ["react-spinners", "virtual:b0a4c16922af7feb44791245ecd11f1b2cbd2c7a9d6b890b3a77018748e5f06e6a300aae20fe33d0c07993bf0ebab5044b1d86c00b5ea8d4b44287da003232bb#npm:0.14.1"],\
           ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"],\
           ["web-vitals", "npm:2.1.4"]\
         ],\
@@ -7915,6 +7916,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:b0a4c16922af7feb44791245ecd11f1b2cbd2c7a9d6b890b3a77018748e5f06e6a300aae20fe33d0c07993bf0ebab5044b1d86c00b5ea8d4b44287da003232bb#npm:18.3.1"],\
           ["react-scripts", "virtual:b0a4c16922af7feb44791245ecd11f1b2cbd2c7a9d6b890b3a77018748e5f06e6a300aae20fe33d0c07993bf0ebab5044b1d86c00b5ea8d4b44287da003232bb#npm:5.0.1"],\
+          ["react-spinners", "virtual:b0a4c16922af7feb44791245ecd11f1b2cbd2c7a9d6b890b3a77018748e5f06e6a300aae20fe33d0c07993bf0ebab5044b1d86c00b5ea8d4b44287da003232bb#npm:0.14.1"],\
           ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"],\
           ["web-vitals", "npm:2.1.4"]\
         ],\
@@ -16203,6 +16205,32 @@ const RAW_RUNTIME_STATE =
           "eslint",\
           "react",\
           "typescript"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-spinners", [\
+      ["npm:0.14.1", {\
+        "packageLocation": "./.yarn/cache/react-spinners-npm-0.14.1-545ddaba3f-5b3c101f78.zip/node_modules/react-spinners/",\
+        "packageDependencies": [\
+          ["react-spinners", "npm:0.14.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:b0a4c16922af7feb44791245ecd11f1b2cbd2c7a9d6b890b3a77018748e5f06e6a300aae20fe33d0c07993bf0ebab5044b1d86c00b5ea8d4b44287da003232bb#npm:0.14.1", {\
+        "packageLocation": "./.yarn/__virtual__/react-spinners-virtual-f5895f82c5/0/cache/react-spinners-npm-0.14.1-545ddaba3f-5b3c101f78.zip/node_modules/react-spinners/",\
+        "packageDependencies": [\
+          ["react-spinners", "virtual:b0a4c16922af7feb44791245ecd11f1b2cbd2c7a9d6b890b3a77018748e5f06e6a300aae20fe33d0c07993bf0ebab5044b1d86c00b5ea8d4b44287da003232bb#npm:0.14.1"],\
+          ["@types/react", "npm:18.3.4"],\
+          ["@types/react-dom", "npm:18.3.0"],\
+          ["react", "npm:18.3.1"],\
+          ["react-dom", "virtual:b0a4c16922af7feb44791245ecd11f1b2cbd2c7a9d6b890b3a77018748e5f06e6a300aae20fe33d0c07993bf0ebab5044b1d86c00b5ea8d4b44287da003232bb#npm:18.3.1"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\
