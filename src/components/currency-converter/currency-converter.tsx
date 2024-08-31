@@ -2,16 +2,16 @@ import React, { useMemo, useState } from 'react'
 import styles from './currency-converter.module.css'
 import { CurrencyInput, CurrencyInputProps } from './currency-input'
 import { useTicker } from '../../api/uphold'
-import { CurrencyLine, CurrencyLineProps } from './currency-line'
+import { CurrencyList, CurrencyListProps } from './currency-list'
 
 const CurrencyConverter = () => {
   const [amount, setAmount] = useState('1000')
   const [currency, setCurrency] = useState('USD')
-  const { data } = useTicker(currency)
+  const { data, isLoading, isError } = useTicker(currency)
 
   const amountNumber = useMemo(() => parseFloat(amount), [amount])
 
-  const values: CurrencyLineProps[] = useMemo(
+  const values: CurrencyListProps['values'] = useMemo(
     () =>
       data?.map((ticker) => ({
         currency: ticker.currency,
@@ -35,6 +35,11 @@ const CurrencyConverter = () => {
     onCurrencyChange: handleCurrencyChange,
   }
 
+  const currencyListProps: CurrencyListProps = {
+    values,
+    isLoading,
+  }
+
   return (
     <div className={styles.converter}>
       <h1 className={styles.title}>Currency Converter</h1>
@@ -43,16 +48,14 @@ const CurrencyConverter = () => {
         how we compare.
       </p>
       <CurrencyInput {...currencyInputProps} />
-      {!amount || amountNumber === 0 ? (
+      {!amount || amountNumber === 0 || isError ? (
         <p className={styles.placeholderText}>
-          Enter an amount to check the rates.
+          {isError
+            ? "We're having trouble with the chosen currency. Please choose a different one."
+            : 'Enter an amount to check the rates.'}
         </p>
       ) : (
-        <div className={styles.currencyList}>
-          {values?.map((value) => (
-            <CurrencyLine key={value.currency} {...value} />
-          ))}
-        </div>
+        <CurrencyList {...currencyListProps} />
       )}
     </div>
   )

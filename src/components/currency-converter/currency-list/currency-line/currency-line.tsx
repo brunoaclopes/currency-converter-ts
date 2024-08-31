@@ -1,5 +1,5 @@
 import { useCallback } from 'react'
-import { CurrencyIcon } from '../currency-icon'
+import { CurrencyIcon } from '../../currency-icon'
 import styles from './currency-line.module.css'
 
 export interface CurrencyLineProps {
