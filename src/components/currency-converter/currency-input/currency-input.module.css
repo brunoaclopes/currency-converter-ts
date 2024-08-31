@@ -18,8 +18,12 @@
         outline: none;
         border: none;
         background: transparent;
-        color: #8292a4;
+        color: #3c4a5b;
         box-sizing: border-box;
+
+        &::placeholder {
+            color: #8494a5;
+        }
     }
 
     .currencySelector {
@@ -40,7 +44,7 @@
         .currencyCode {
             font-size: 16px;
             font-weight: bold;
-            color: #3d4b5c;
+            color: #3c4a5b;
         }
 
         .dropdownIcon {
@@ -68,7 +72,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             font-weight: bold;
-            color: #3d4b5c;
+            color: #3c4a5b;
 
             /* Hide scrollbar for IE, Edge and Firefox */
             -ms-overflow-style: none;  /* IE and Edge */
