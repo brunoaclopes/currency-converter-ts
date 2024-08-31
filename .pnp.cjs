@@ -35,7 +35,9 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/user-event", "virtual:b0a4c16922af7feb44791245ecd11f1b2cbd2c7a9d6b890b3a77018748e5f06e6a300aae20fe33d0c07993bf0ebab5044b1d86c00b5ea8d4b44287da003232bb#npm:13.5.0"],\
           ["@types/eslint", "npm:8.56.12"],\
           ["@types/eslint__js", "npm:8.42.3"],\
+          ["@types/identity-obj-proxy", "npm:3.0.2"],\
           ["@types/jest", "npm:27.5.2"],\
+          ["@types/lodash", "npm:4.17.7"],\
           ["@types/node", "npm:16.18.106"],\
           ["@types/react", "npm:18.3.4"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -58,6 +60,8 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react-hooks", "virtual:b0a4c16922af7feb44791245ecd11f1b2cbd2c7a9d6b890b3a77018748e5f06e6a300aae20fe33d0c07993bf0ebab5044b1d86c00b5ea8d4b44287da003232bb#npm:4.6.2"],\
           ["eslint-plugin-unicorn", "virtual:b0a4c16922af7feb44791245ecd11f1b2cbd2c7a9d6b890b3a77018748e5f06e6a300aae20fe33d0c07993bf0ebab5044b1d86c00b5ea8d4b44287da003232bb#npm:46.0.1"],\
           ["globals", "npm:15.9.0"],\
+          ["identity-obj-proxy", "npm:3.0.0"],\
+          ["lodash", "npm:4.17.21"],\
           ["prettier", "npm:3.3.3"],\
           ["process", "npm:0.11.10"],\
           ["react", "npm:18.3.1"],\
@@ -4879,6 +4883,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/identity-obj-proxy", [\
+      ["npm:3.0.2", {\
+        "packageLocation": "./.yarn/cache/@types-identity-obj-proxy-npm-3.0.2-c967fa469f-9277c7bf75.zip/node_modules/@types/identity-obj-proxy/",\
+        "packageDependencies": [\
+          ["@types/identity-obj-proxy", "npm:3.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/istanbul-lib-coverage", [\
       ["npm:2.0.6", {\
         "packageLocation": "./.yarn/cache/@types-istanbul-lib-coverage-npm-2.0.6-2ea31fda9c-3948088654.zip/node_modules/@types/istanbul-lib-coverage/",\
@@ -4933,6 +4946,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-json5-npm-0.0.29-f63a7916bd-6bf5337bc4.zip/node_modules/@types/json5/",\
         "packageDependencies": [\
           ["@types/json5", "npm:0.0.29"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/lodash", [\
+      ["npm:4.17.7", {\
+        "packageLocation": "./.yarn/cache/@types-lodash-npm-4.17.7-2077805efb-40c965b5ff.zip/node_modules/@types/lodash/",\
+        "packageDependencies": [\
+          ["@types/lodash", "npm:4.17.7"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7888,7 +7910,9 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/user-event", "virtual:b0a4c16922af7feb44791245ecd11f1b2cbd2c7a9d6b890b3a77018748e5f06e6a300aae20fe33d0c07993bf0ebab5044b1d86c00b5ea8d4b44287da003232bb#npm:13.5.0"],\
           ["@types/eslint", "npm:8.56.12"],\
           ["@types/eslint__js", "npm:8.42.3"],\
+          ["@types/identity-obj-proxy", "npm:3.0.2"],\
           ["@types/jest", "npm:27.5.2"],\
+          ["@types/lodash", "npm:4.17.7"],\
           ["@types/node", "npm:16.18.106"],\
           ["@types/react", "npm:18.3.4"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -7911,6 +7935,8 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react-hooks", "virtual:b0a4c16922af7feb44791245ecd11f1b2cbd2c7a9d6b890b3a77018748e5f06e6a300aae20fe33d0c07993bf0ebab5044b1d86c00b5ea8d4b44287da003232bb#npm:4.6.2"],\
           ["eslint-plugin-unicorn", "virtual:b0a4c16922af7feb44791245ecd11f1b2cbd2c7a9d6b890b3a77018748e5f06e6a300aae20fe33d0c07993bf0ebab5044b1d86c00b5ea8d4b44287da003232bb#npm:46.0.1"],\
           ["globals", "npm:15.9.0"],\
+          ["identity-obj-proxy", "npm:3.0.0"],\
+          ["lodash", "npm:4.17.21"],\
           ["prettier", "npm:3.3.3"],\
           ["process", "npm:0.11.10"],\
           ["react", "npm:18.3.1"],\
