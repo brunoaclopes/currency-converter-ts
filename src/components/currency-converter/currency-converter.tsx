@@ -1,11 +1,11 @@
 import React, { useMemo, useState } from 'react'
 import styles from './currency-converter.module.css'
 import { CurrencyInput, CurrencyInputProps } from './currency-input'
-import { useTicker } from '../../api/uphold'
+import { useTicker } from '../../api'
 import { CurrencyList, CurrencyListProps } from './currency-list'
 
 const CurrencyConverter = () => {
-  const [amount, setAmount] = useState('1000')
+  const [amount, setAmount] = useState('')
   const [currency, setCurrency] = useState('USD')
   const { data, isLoading, isError } = useTicker(currency)
 

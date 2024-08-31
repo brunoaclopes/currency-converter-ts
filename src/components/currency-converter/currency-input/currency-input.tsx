@@ -49,10 +49,12 @@ export const CurrencyInput = ({
         onChange={(e) => handleAmountChange(e.target.value)}
         placeholder='0.00'
         className={styles.amountInput}
+        data-testid='amount-input'
       />
       <div
         className={styles.currencySelector}
         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+        data-testid='currency-selector'
       >
         <CurrencyIcon currency={currency} className={styles.currencyIcon} />
         <span className={styles.currencyCode}>{currency}</span>
