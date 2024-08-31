@@ -1,44 +1,53 @@
 .header {
     background-color: #fff;
-    padding: 20px 40px;
-    font-family: Arial, sans-serif;
-}
+    padding: 40px 60px;
+    font-family: Roboto, sans-serif;
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .navbar {
+        position: relative;
 
-.logo {
-    width: 120px;
-}
+        & > * {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
-.navLinks {
-    display: flex;
-    gap: 30px;
-}
+        .navLinks {
+            left: 0;
+            display: flex;
+            gap: 30px;
 
-.navLink {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-}
+            .navLink {
+                text-decoration: none;
+                color: #7b8c9f;
+                font-size: 14px;
 
-.navLink:hover {
-    color: #007bff;
-}
+                &:hover {
+                    color: #49cc68;
+                }
+            }
+        }
 
-.loginButton {
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
+        .logo {
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            cursor: pointer;
+        }
 
-.loginButton:hover {
-    background-color: #218838;
+        .loginButton {
+            width: 100px;
+            right: 0;
+            background-color: #49cc68;
+            color: #fff;
+            border: none;
+            border-radius: 40px;
+            padding: 10px;
+            font-size: 14px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #49cc68dd;
+            }
+        }
+    }
 }
