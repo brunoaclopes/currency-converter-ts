@@ -9,13 +9,15 @@ const CurrencyConverter = () => {
   const [currency, setCurrency] = useState('USD')
   const { data } = useTicker(currency)
 
+  const amountNumber = useMemo(() => parseFloat(amount), [amount])
+
   const values: CurrencyLineProps[] = useMemo(
     () =>
       data?.map((ticker) => ({
         currency: ticker.currency,
-        value: parseFloat(ticker.ask) * parseFloat(amount),
+        value: parseFloat(ticker.ask) * amountNumber,
       })) || [],
-    [data, amount],
+    [data, amountNumber],
   )
 
   const handleAmountChange = (value: string) => {
@@ -41,12 +43,16 @@ const CurrencyConverter = () => {
         how we compare.
       </p>
       <CurrencyInput {...currencyInputProps} />
-      {!amount || parseFloat(amount) === 0 ? (
+      {!amount || amountNumber === 0 ? (
         <p className={styles.placeholderText}>
           Enter an amount to check the rates.
         </p>
       ) : (
-        values?.map((value) => <CurrencyLine key={value.currency} {...value} />)
+        <div className={styles.currencyList}>
+          {values?.map((value) => (
+            <CurrencyLine key={value.currency} {...value} />
+          ))}
+        </div>
       )}
     </div>
   )

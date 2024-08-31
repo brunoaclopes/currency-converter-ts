@@ -2,4 +2,31 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    margin: 10px 0;
+
+    .value {
+        font-size: 16px;
+        font-weight: bold;
+        color: #3d4b5c;
+        margin-left: 10px;
+    }
+
+    .containerRight {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        min-width: 100px;
+
+        .currencyIcon {
+            width: 22px;
+            margin-right: 6px;
+        }
+
+        .currencyCode {
+            font-size: 16px;
+            font-weight: bold;
+            color: #3d4b5c;
+        }
+    }
 }
