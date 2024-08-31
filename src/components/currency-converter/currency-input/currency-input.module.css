@@ -1,0 +1,96 @@
+.inputContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    width: 400px;
+    padding: 12px;
+    background: #f5f9fc;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    .amountInput {
+        flex: 1 1 auto;
+        min-width: 100px;
+        font-size: 30px;
+        text-align: left;
+        outline: none;
+        border: none;
+        background: transparent;
+        color: #8292a4;
+        box-sizing: border-box;
+    }
+
+    .currencySelector {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 40px;
+        cursor: pointer;
+        position: relative;
+        box-sizing: border-box;
+
+        .currencyIcon {
+            width: 22px;
+            margin-right: 10px;
+        }
+
+        .currencyCode {
+            font-size: 16px;
+            font-weight: bold;
+            color: #3d4b5c;
+        }
+
+        .dropdownIcon {
+            width: 12px;
+            margin-left: 10px;
+            transition: transform 0.5s;
+        }
+
+        .dropdownIconOpen {
+            transform: rotate(-180deg);
+        }
+
+        .dropdownMenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            max-height: 160px;
+            overflow-y: auto;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            color: #3d4b5c;
+
+            /* Hide scrollbar for IE, Edge and Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+
+            /* Hide scrollbar for Chrome, Safari and Opera */
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .dropdownItem {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 10px;
+                cursor: pointer;
+                transition: color 0.2s;
+            }
+
+            .dropdownItem:hover {
+                color: #49cc68;
+            }
+        }
+    }
+}

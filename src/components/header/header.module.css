@@ -1,0 +1,44 @@
+.header {
+    background-color: #fff;
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+}
+
+.navLinks {
+    display: flex;
+    gap: 30px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.navLink:hover {
+    color: #007bff;
+}
+
+.loginButton {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.loginButton:hover {
+    background-color: #218838;
+}
