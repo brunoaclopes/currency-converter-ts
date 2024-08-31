@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import classNames from 'classnames'
+import { debounce } from 'lodash'
 import styles from './currency-input.module.css'
 import { dropdownIcon } from '../../../assets'
 import { Currencies } from '../../../constants'
@@ -18,6 +19,7 @@ export const CurrencyInput = ({
   currency,
   onCurrencyChange,
 }: CurrencyInputProps) => {
+  const [amountState, setAmountState] = useState(amount)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
   const handleCurrencyChange = (value: string) => {
@@ -25,23 +27,17 @@ export const CurrencyInput = ({
     setIsDropdownOpen(false)
   }
 
-  // function formatCurrency(value: string) {
-  //   const number = parseFloat(value.replace(/,/g, ''))
-  //   if (Number.isNaN(number)) return ''
-  //   return new Intl.NumberFormat('en-US', {
-  //     style: 'currency',
-  //     currency: 'USD',
-  //     minimumFractionDigits: 2,
-  //   })
-  //     .format(number)
-  //     .replace('$', '')
-  // }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const debouncedAmountChange = useCallback(
+    debounce((value: string) => {
+      onAmountChange(value)
+    }, 300),
+    [],
+  )
 
   const handleAmountChange = (value: string) => {
-    // eslint-disable-next-line no-console
-    // console.log(formatCurrency(value))
-    // onAmountChange(formatCurrency(value))
-    onAmountChange(value)
+    setAmountState(value)
+    debouncedAmountChange(value)
   }
 
   return (
@@ -49,7 +45,7 @@ export const CurrencyInput = ({
       <input
         type='text'
         data-type='currency'
-        value={amount}
+        value={amountState}
         onChange={(e) => handleAmountChange(e.target.value)}
         placeholder='0.00'
         className={styles.amountInput}
