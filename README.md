@@ -2,14 +2,13 @@
 
 This is a simple currency converter that converts one currency to another. It uses the [Uphold SDK](https://docs.uphold.com/) to get the exchange rates.
 
----
-
 ## Assessment Challenge
 
 > As a User, I want to see an input amount displayed according to the exchange rates for the different currencies supported by Uphold.
 
 ### Mockup
 
+![image](https://github.com/user-attachments/assets/50670d47-894a-4a28-a44f-1877ce51b8f9)
 
 ### Acceptance Criteria
 
@@ -21,16 +20,16 @@ This is a simple currency converter that converts one currency to another. It us
 
 ### Technical Specs
 
-1. **MUST** use React.
-2. **MUST** use ES6.
-3. **MUST** list at least 10 different currencies.
-4. **MUST** use the Uphold Javascript SDK.
-5. **MAY** have proper linting tools.
-6. **MAY** use the uphold design system.
-7. **MAY** handle CORS without having to rely on the browser extension.
-8. **MAY** list all available currencies dynamically.
-9. **MAY** implement unit tests.
-10. **MAY** implement E2E tests.
+1. ✅ **MUST** use React.
+2. ✅ **MUST** use ES6.
+3. ✅ **MUST** list at least 10 different currencies.
+4. ✅ **MUST** use the Uphold Javascript SDK.
+5. ✅ **MAY** have proper linting tools.
+6. ✅ **MAY** use the uphold design system.
+7. 🔲 **MAY** handle CORS without having to rely on the browser extension.
+8. ✅ **MAY** list all available currencies dynamically.
+9. ✅ **MAY** implement unit tests.
+10. 🔲 **MAY** implement E2E tests.
 
 **Note**: Only **MUST** points are mandatory.
 
@@ -64,8 +63,6 @@ The [Moesif Origin & CORS Changer](https://chrome.google.com/webstore/detail/moe
 
 The design specifications and assets are available [here](https://drive.google.com/open?id=1yhaoJonAEMbiFJyITqWmuENVG1kkEHMp).
 
----
-
 ## Getting Started
 
 1. Clone the repository:
@@ -87,12 +84,10 @@ The design specifications and assets are available [here](https://drive.google.c
 - The application will be available at `http://localhost:3000`.
 - This repo uses yarn pnp and zero-installs, so you shouldn't need to run `yarn install` before running the application. If you end up getting any package related errors when running the application, try running `yarn install`.
 
----
-
 ## Available Scripts
 In the project directory, you can run:  
 
-### yarn start
+### `yarn start`
 
 Runs the app in the development mode.
 
@@ -101,17 +96,25 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.
 You will also see any lint errors in the console.  
 
-### yarn test
+### `yarn test`
 
 Launches the test runner in the interactive watch mode.
 
-### yarn build
+### `yarn build`
 
 Builds the app for production to the build folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 The build is minified and the filenames include the hashes. Your app is ready to be deployed!
 
----
+### `yarn lint`
+
+Runs **ESLint** on all **TypeScript** files in the src directory.
+
+## Final Design
+
+![image](https://github.com/user-attachments/assets/f44879d7-6ddd-4ec2-a8f4-d0005e0faf03)
+![image](https://github.com/user-attachments/assets/56ed9b4a-c022-411b-bb9e-a93afa22eb4b)
+
 
 ## License
 
