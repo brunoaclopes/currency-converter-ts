@@ -2,6 +2,8 @@
 
 This is a simple currency converter that converts one currency to another. It uses the [Uphold SDK](https://docs.uphold.com/) to get the exchange rates.
 
+#### You can check out this app in [brunoaclopes.github.io/currency-converter-ts](https://brunoaclopes.github.io/currency-converter-ts/)
+
 ## Assessment Challenge
 
 > As a User, I want to see an input amount displayed according to the exchange rates for the different currencies supported by Uphold.
