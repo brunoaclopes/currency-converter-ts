@@ -17,6 +17,10 @@
             display: flex;
             gap: 30px;
 
+            @media screen and (max-width: 800px) {
+                display: none;
+            }
+
             .navLink {
                 text-decoration: none;
                 color: #7b8c9f;

@@ -1,14 +1,23 @@
 .app {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .mainContent {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+@media screen and (min-height: 900px) {
+    .app {
+        overflow: hidden;
+    }
+
+    .mainContent {
+        min-height: 0;
+    }
 }
