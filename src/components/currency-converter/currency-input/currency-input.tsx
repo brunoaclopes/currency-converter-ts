@@ -36,8 +36,26 @@ export const CurrencyInput = ({
   )
 
   const handleAmountChange = (value: string) => {
-    setAmountState(value)
-    debouncedAmountChange(value)
+    const parts = value.split('.')
+    const integerPart = parseInt(parts[0]?.replace(/\D/g, ''), 10)
+    const decimalPart = parts[1]?.replace(/\D/g, '')
+
+    const formattedInteger = !Number.isNaN(integerPart)
+      ? new Intl.NumberFormat('en-EN').format(integerPart)
+      : ''
+
+    const formattedValue =
+      parts.length > 1
+        ? `${formattedInteger || 0}.${decimalPart}`
+        : formattedInteger
+
+    setAmountState(formattedValue)
+
+    const debouncedValue = !Number.isNaN(integerPart)
+      ? `${integerPart}.${decimalPart || 0}`
+      : ''
+
+    debouncedAmountChange(debouncedValue)
   }
 
   return (
