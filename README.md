@@ -28,7 +28,7 @@ This is a simple currency converter that converts one currency to another. It us
 4. ✅ **MUST** use the Uphold Javascript SDK.
 5. ✅ **MAY** have proper linting tools.
 6. ✅ **MAY** use the uphold design system.
-7. 🔲 **MAY** handle CORS without having to rely on the browser extension.
+7. ✅ **MAY** handle CORS without having to rely on the browser extension.
 8. ✅ **MAY** list all available currencies dynamically.
 9. ✅ **MAY** implement unit tests.
 10. 🔲 **MAY** implement E2E tests.
