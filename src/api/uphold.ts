@@ -5,7 +5,7 @@ import { Currencies } from '../constants'
 
 /* eslint-disable node/no-process-env, @typescript-eslint/naming-convention */
 const sdk = new SDK({
-  baseUrl: process.env.REACT_APP_BASE_URL || '',
+  baseUrl: `https://corsproxy.io/?${process.env.REACT_APP_BASE_URL || ''}`, // corsproxy.io is used to bypass CORS restrictions
   clientId: process.env.REACT_APP_CLIENT_ID || '',
   clientSecret: process.env.REACT_APP_CLIENT_SECRET || '',
 })
